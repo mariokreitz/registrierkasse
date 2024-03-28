@@ -1,0 +1,154 @@
+:root {
+  --snow-white: #fffafa;
+  --gray: #808080;
+  --iron-grey: #d0d7d7;
+  --rock-blue: #a1c6d1;
+  --fiord-blue: #3c5469;
+  --horizon-blue: #5f8ea6;
+  --pigeon-post-blue: #a4bcd4;
+  --spring-leaves-green: #5e9964;
+  --roman-red: #da5a5b;
+  --apple-blossom-red: #ad444d;
+  --celery-yellow: #bfb457;
+  --confetti-yellow: #e4cb5b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 250px;
+  height: 100vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(180deg, var(--snow-white) 70%, var(--iron-grey) 100%);
+}
+.page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 10px;
+}
+#change-due {
+  text-align: left;
+  font-size: 1.2rem;
+}
+.input-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+.user-input {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+.check-btn-styles {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.check-btn-styles:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+.cash-register {
+  width: 205px;
+}
+.cash-register-display {
+  background-color: var(--iron-grey);
+  border: 4px solid var(--gray);
+  margin: 0px auto -20px;
+  padding: 10px;
+  z-index: 9999;
+  width: 165px;
+  position: relative;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.price-screen {
+  display: flex;
+  justify-content: space-between;
+  color: var(--spring-leaves-green);
+}
+.price-screen::before {
+  content: 'Total $';
+}
+.cash-register-body {
+  background-color: var(--rock-blue);
+  padding-top: 20px;
+  border-radius: 8px;
+}
+.cash-register-input {
+  background-color: var(--horizon-blue);
+  width: 185px;
+  padding: 5px 10px;
+  margin: 5px 10px 10px 10px;
+  border-radius: 8px;
+}
+.btn {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 32px;
+  height: 22px;
+  border-radius: 5px;
+  margin: 3px;
+  border: none;
+  background-color: var(--snow-white);
+}
+.btn-number {
+  box-shadow: inset 0px -2px 2px 1px var(--iron-grey);
+}
+.btn-operation {
+  background-color: var(--confetti-yellow);
+  box-shadow: inset 0px -2px 2px 1px var(--celery-yellow);
+}
+.btn-control {
+  font-weight: 500;
+  color: var(--snow-white);
+  background-color: var(--roman-red);
+  box-shadow: inset 0px -2px 2px 1px var(--apple-blossom-red);
+}
+.cash-register-gap {
+  height: 8px;
+  background-color: var(--horizon-blue);
+}
+.cash-register-drawer {
+  background-color: var(--fiord-blue);
+  color: var(--snow-white);
+  padding: 10px;
+  font-weight: 400;
+}
+.cash-register-drawer-cover {
+  height: 32px;
+}
+.circle {
+  margin: 16px auto;
+  border-radius: 50%;
+  width: 16px;
+  height: 8px;
+  background-color: black;
+}
