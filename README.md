@@ -4,7 +4,7 @@ Dieses Projekt ist Teil des JavaScript-Algorithmen- und Datenstrukturkurses auf 
 
 ## Vorschau
 
-Fühlen Sie sich frei, das [Demo hier](https://codepen.io/mariokreitz/pen/bGJrXVQ)) auszuprobieren.
+Fühlen Sie sich frei, das [Demo hier](https://codepen.io/mariokreitz/pen/bGJrXVQ) auszuprobieren.
 
 ## Status
 
