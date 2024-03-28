@@ -2,6 +2,10 @@
 
 Dieses Projekt ist Teil des JavaScript-Algorithmen- und Datenstrukturkurses auf freeCodeCamp.org. Es handelt sich um die Registrierkasse, die eine Funktion hat, die den Status des Kassenbestands und des Wechselgeldes basierend auf dem Einkaufsbetrag und dem gezahlten Geld berechnet.
 
+## Vorschau
+
+Fühlen Sie sich frei, das [Demo hier](https://codepen.io/mariokreitz/pen/bGJrXVQ)) auszuprobieren.
+
 ## Status
 
 - **UNZUREICHENDES GUTHABEN:** Wenn das Kassenfach weniger Bargeld enthält als das Wechselgeld oder wenn Sie das genaue Wechselgeld nicht zurückgeben können.
@@ -19,6 +23,44 @@ Dieses Projekt ist Teil des JavaScript-Algorithmen- und Datenstrukturkurses auf 
 - Zehn Dollar: $10 (TEN)
 - Zwanzig Dollar: $20 (TWENTY)
 - Ein Hundert Dollar: $100 (ONE HUNDRED)
+   
+## Installation
+
+1. Klone das Repository:
+
+```bash
+git clone https://github.com/mariokreitz/registrierkasse.git
+```
+
+2. Navigiere zum Projektverzeichnis:
+
+```bash
+cd registrierkasse
+```
+
+3. Öffne die `index.html`-Datei in einem Webbrowser deiner Wahl.
+
+## Verwendung
+
+1. Geben Sie eine Zahl in das Eingabefeld ein.
+2. Klicke auf die Schaltfläche "Purchase" oder betätigen Sie die "Enter" Taste.
+3. Das Ergebnis wird oberhalb der Eingabe angezeigt.
+
+## Beispiel
+
+Wenn du "2" eingibst bei einem "Total $ 1.87" , wird das Ergebnis wie folgt sein:
+
+- Status: OPEN
+- DIME: $0.1
+- PENNY: $0.03
+
+## Anpassung
+
+Du kannst das Design oder die Funktionalität der Registrierkasse an deine eigenen Bedürfnisse anpassen, indem du die HTML-, CSS- und JavaScript-Dateien bearbeitest.
+
+## Beitrag
+
+Fühlen Sie sich frei, Pull-Requests mit Verbesserungsvorschlägen oder Fehlerkorrekturen zu erstellen. Jede Art von Beitrag ist willkommen!
 
 ## Projekt von
 
