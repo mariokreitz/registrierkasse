@@ -1,4 +1,4 @@
-# Registrierkasse
+# Registrierkasse [![Netlify Status](https://api.netlify.com/api/v1/badges/b565616d-048d-4be0-9e47-8a0f74a81a8a/deploy-status)](https://app.netlify.com/sites/registrierkasse/deploys)
 
 Dieses Projekt ist Teil des JavaScript-Algorithmen- und Datenstrukturkurses auf freeCodeCamp.org. Es handelt sich um die Registrierkasse, die eine Funktion hat, die den Status des Kassenbestands und des Wechselgeldes basierend auf dem Einkaufsbetrag und dem gezahlten Geld berechnet.
 
