@@ -10,6 +10,21 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100],
 ];
+//--------------------------------------------------
+
+let cidDef = [
+  ['PENNY', 0.01],
+  ['NICKEL', 0.05],
+  ['DIME', 0.1],
+  ['QUARTER', 0.25],
+  ['ONE', 1],
+  ['FIVE', 5],
+  ['TEN', 10],
+  ['TWENTY', 20],
+  ['ONE HUNDRED', 100],
+];
+
+let changeDue;
 
 const displayChangeDue = document.getElementById('change-due');
 const cash = document.getElementById('cash');
@@ -21,22 +36,6 @@ const checkPayment = () => {
   if (!cash.value) {
     return;
   }
-  checkCashRegister();
-};
-/* When price is 19.5, the value in the #cash element is 20, cid is
-[["PENNY", 1.01],
-["NICKEL", 2.05],
-["DIME", 3.1],
-["QUARTER", 4.25],
-["ONE", 90],
-["FIVE", 55],
-["TEN", 20],
-["TWENTY", 60],
-["ONE HUNDRED", 100]],
-and the #purchase-btn element is clicked,
-the value in the #change-due element should be "Status: OPEN QUARTER: $0.5" */
-
-const checkCashRegister = () => {
   if (Number(cash.value) < price) {
     alert('Customer does not have enough money to purchase the item');
     cash.value = '';
@@ -47,9 +46,43 @@ const checkCashRegister = () => {
     cash.value = '';
     return;
   }
+  checkCashRegister();
 };
 
-const updateUI = () => {
+const checkCashRegister = () => {
+  // calculate the change and round it up to exactly 2 decimals points e.g .1299999 => 0.13
+  changeDue = cash.value - price;
+  changeDue = Math.round((changeDue + Number.EPSILON) * 100) / 100;
+
+  let result = [];
+  cidDef.reverse();
+  for (let i = 0; i < cidDef.length; i++) {
+    let counter = 0;
+    let cidDefKey = cidDef[i][0];
+    let cidDefValue = cidDef[i][1];
+    while (changeDue >= cidDefValue) {
+      counter++;
+      changeDue -= cidDefValue;
+      changeDue = Math.round((changeDue + Number.EPSILON) * 100) / 100;
+    }
+    result.push([cidDefKey, cidDefValue, counter]);
+  }
+  updateUI(result);
+};
+
+const updateUI = (resultArr) => {
+  const displayResult = [];
+  if (resultArr) {
+    resultArr
+      .map((key) => {
+        if (key[2] > 0) {
+          displayResult.push(key);
+        }
+      })
+      .filter((item) => item);
+    displayResult.map((money) => (displayChangeDue.innerHTML += `<p>${money[0]}: $${money[1] * money[2]}</p>`));
+  }
+
   priceScreen.textContent = price;
 };
 
