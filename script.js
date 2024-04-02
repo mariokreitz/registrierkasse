@@ -82,8 +82,10 @@ const updateUI = (resultArr) => {
       .filter((item) => item);
     displayResult.map((money) => (displayChangeDue.innerHTML += `<p>${money[0]}: $${money[1] * money[2]}</p>`));
   }
-
+  cash.value = '';
   priceScreen.textContent = price;
+  cashDrawerDisplay.innerHTML = `${cid.map((money) => `<p>${[money[0]]}: $${money[1]}</p>`).join('')}  
+  `;
 };
 
 purchaseBtn.addEventListener('click', checkPayment);
